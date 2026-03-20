@@ -1,0 +1,202 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="AB Brothers Construction | Home Remodeling in Pittsburgh's South Hills"
+  description="AB Brothers Construction is a family-owned general contractor in Pittsburgh's South Hills, specializing in kitchen and bathroom remodels, home additions, and alterations. Over 12 years of experience."
+>
+
+  <!-- Hero -->
+  <section class="relative bg-primary overflow-hidden">
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(196,132,45,0.15),transparent_60%)]"></div>
+    <div class="max-w-[1200px] mx-auto px-6 md:px-12 py-24 md:py-36 relative z-10">
+      <div class="max-w-2xl">
+        <p class="text-accent font-semibold text-sm tracking-widest uppercase mb-4">Family-Owned &middot; South Hills, Pittsburgh</p>
+        <h1 class="text-primary-foreground mb-6">Committed to Quality and Craftsmanship</h1>
+        <p class="text-primary-foreground/75 text-lg md:text-xl leading-relaxed mb-10 max-w-xl">
+          We're craftsmen dedicated to bringing your vision to life with precision and integrity. From kitchen remodels to full home additions, we do the work right.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="/contact" class="bg-accent text-white font-semibold px-8 py-3.5 rounded-full text-center hover:bg-accent/90">
+            Get a Free Quote
+          </a>
+          <a href="/services" class="border border-primary-foreground/30 text-primary-foreground font-medium px-8 py-3.5 rounded-full text-center hover:bg-primary-foreground/10">
+            View Our Work
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-background to-transparent"></div>
+  </section>
+
+  <!-- Services Overview -->
+  <section class="py-20 md:py-28">
+    <div class="max-w-[1200px] mx-auto px-6 md:px-12">
+      <div class="text-center mb-14">
+        <p class="text-accent font-semibold text-sm tracking-widest uppercase mb-3">What We Do</p>
+        <h2>Our Services</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <a href="/services#additions" class="group block bg-white rounded-md border border-border overflow-hidden">
+          <div class="border-t-2 border-accent"></div>
+          <div class="aspect-[4/3] overflow-hidden">
+            <img
+              src="/images/home-additions-pittburgh-pa.png"
+              alt="Home Additions Pittsburgh, PA"
+              class="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </div>
+          <div class="p-6">
+            <h3 class="mb-2">Additions</h3>
+            <p class="text-muted-foreground text-sm leading-relaxed">
+              Expand your living space with custom home additions that match your home's character. New rooms, larger living areas, and more.
+            </p>
+          </div>
+        </a>
+
+        <a href="/services#kitchen-bath" class="group block bg-white rounded-md border border-border overflow-hidden">
+          <div class="border-t-2 border-accent"></div>
+          <div class="aspect-[4/3] overflow-hidden">
+            <img
+              src="/images/bathroom-1200-x-1200-updated.png"
+              alt="Kitchen & Bathroom Remodeling South Hills of Pittsburgh"
+              class="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </div>
+          <div class="p-6">
+            <h3 class="mb-2">Kitchens & Bathrooms</h3>
+            <p class="text-muted-foreground text-sm leading-relaxed">
+              Custom cabinetry, tile work, plumbing, and full renovations. Over 12 years turning everyday spaces into your favorite rooms.
+            </p>
+          </div>
+        </a>
+
+        <a href="/services#alterations" class="group block bg-white rounded-md border border-border overflow-hidden">
+          <div class="border-t-2 border-accent"></div>
+          <div class="aspect-[4/3] overflow-hidden">
+            <img
+              src="/images/2-1.png"
+              alt="Home Remodeling Pittsburgh PA"
+              class="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </div>
+          <div class="p-6">
+            <h3 class="mb-2">Home Alterations</h3>
+            <p class="text-muted-foreground text-sm leading-relaxed">
+              Open-concept layouts, complete room makeovers, basement finishing, and structural changes that transform how you live.
+            </p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Preview -->
+  <section class="bg-muted py-20 md:py-28">
+    <div class="max-w-[1200px] mx-auto px-6 md:px-12">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div>
+          <p class="text-accent font-semibold text-sm tracking-widest uppercase mb-3">About Us</p>
+          <h2 class="mb-6">Craftsmanship You Can Trust</h2>
+          <p class="text-muted-foreground leading-relaxed mb-4">
+            AB Brothers Construction is a licensed and insured, family-owned residential general contractor based in Pittsburgh's South Hills. With decades of combined experience, we specialize in kitchen, bath, and game room remodels, while also offering expert plumbing and electrical services.
+          </p>
+          <p class="text-muted-foreground leading-relaxed mb-8">
+            Our work is backed by a team of certified tradesmen dedicated to exceeding expectations. We don't settle for anything less than excellence, and our satisfied customers are proof of our commitment.
+          </p>
+          <a href="/about" class="inline-flex items-center gap-2 text-primary font-semibold text-sm uppercase tracking-wider">
+            Learn More About Us
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </a>
+        </div>
+        <div class="relative">
+          <img
+            src="/images/untitled-design-56.png"
+            alt="Home Remodeling Pittsburgh PA"
+            class="w-full rounded-md"
+            loading="lazy"
+          />
+          <div class="absolute -bottom-4 -left-4 bg-accent text-white px-5 py-3 rounded-md text-sm font-semibold">
+            12+ Years Experience
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="py-20 md:py-28">
+    <div class="max-w-[1200px] mx-auto px-6 md:px-12">
+      <div class="text-center mb-14">
+        <p class="text-accent font-semibold text-sm tracking-widest uppercase mb-3">Testimonials</p>
+        <h2>What Our Clients Say</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <blockquote class="bg-muted p-8 rounded-md border-l-3 border-accent">
+          <p class="text-foreground/80 leading-relaxed mb-5 italic">
+            "AB Brothers did a great job on our addition (mud room and full bath). They were very professional and communicative and transparent throughout the process. Love that this is a family-owned business and it was special to see multiple generations working together on our house for our family."
+          </p>
+          <footer class="flex items-center gap-3">
+            <div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold text-xs">JW</div>
+            <cite class="not-italic text-sm font-medium">Jennifer White</cite>
+          </footer>
+        </blockquote>
+
+        <blockquote class="bg-muted p-8 rounded-md border-l-3 border-accent">
+          <p class="text-foreground/80 leading-relaxed mb-5 italic">
+            "Bob and Andrew were great to work with. From the quality job they did on the kitchen down to the constant communication. They kept the job moving along at a quick pace and their attention to detail eased my mind throughout the job. Get a quote from these guys."
+          </p>
+          <footer class="flex items-center gap-3">
+            <div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold text-xs">SR</div>
+            <cite class="not-italic text-sm font-medium">Seth Ross</cite>
+          </footer>
+        </blockquote>
+
+        <blockquote class="bg-muted p-8 rounded-md border-l-3 border-accent">
+          <p class="text-foreground/80 leading-relaxed mb-5 italic">
+            "These guys are TOP-notch. They walked into our home built sometime in the 1950s and completely renovated it. Not only did they give us design and layout advice, but they made the whole process enjoyable. They made us feel like we were their #1 priority at ALL times."
+          </p>
+          <footer class="flex items-center gap-3">
+            <div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold text-xs">AS</div>
+            <cite class="not-italic text-sm font-medium">Ali S.</cite>
+          </footer>
+        </blockquote>
+
+        <blockquote class="bg-muted p-8 rounded-md border-l-3 border-accent">
+          <p class="text-foreground/80 leading-relaxed mb-5 italic">
+            "Andrew and Bob and all their subcontractors did a FANTASTIC renovation, from helping on the design to demolition 'down to studs' to finished product! They created a very specific timeline (daily) and stuck to it; and kept right on budget. No surprises!"
+          </p>
+          <footer class="flex items-center gap-3">
+            <div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold text-xs">DH</div>
+            <cite class="not-italic text-sm font-medium">Dennis Halpin</cite>
+          </footer>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="bg-primary py-16 md:py-20">
+    <div class="max-w-[1200px] mx-auto px-6 md:px-12 text-center">
+      <h2 class="text-primary-foreground mb-4">Ready to Start Your Project?</h2>
+      <p class="text-primary-foreground/70 max-w-lg mx-auto mb-8">
+        Contact Andy or Bob for a free consultation. We'll walk through your vision, provide a detailed quote, and set a clear timeline.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/contact" class="bg-accent text-white font-semibold px-8 py-3.5 rounded-full hover:bg-accent/90">
+          Get a Free Quote
+        </a>
+        <a href="tel:4128551849" class="border border-primary-foreground/30 text-primary-foreground font-medium px-8 py-3.5 rounded-full hover:bg-primary-foreground/10">
+          Call (412) 855-1849
+        </a>
+      </div>
+    </div>
+  </section>
+
+</Layout>
