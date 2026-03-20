@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
 <Layout
@@ -139,7 +140,7 @@ import Layout from '../layouts/Layout.astro';
       <p class="text-primary-foreground/70 max-w-lg mx-auto mb-8">
         We'd love to hear about your project. Contact us for a free in-home consultation.
       </p>
-      <a href="/contact" class="inline-block bg-accent text-white font-semibold px-8 py-3.5 rounded-full hover:bg-accent/90">
+      <a href={`${base}/contact`} class="inline-block bg-accent text-white font-semibold px-8 py-3.5 rounded-full hover:bg-accent/90">
         Get in Touch
       </a>
     </div>

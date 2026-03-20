@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
 <Layout
@@ -18,10 +19,10 @@ import Layout from '../layouts/Layout.astro';
           We're craftsmen dedicated to bringing your vision to life with precision and integrity. From kitchen remodels to full home additions, we do the work right.
         </p>
         <div class="flex flex-col sm:flex-row gap-4">
-          <a href="/contact" class="bg-accent text-white font-semibold px-8 py-3.5 rounded-full text-center hover:bg-accent/90">
+          <a href={`${base}/contact`} class="bg-accent text-white font-semibold px-8 py-3.5 rounded-full text-center hover:bg-accent/90">
             Get a Free Quote
           </a>
-          <a href="/services" class="border border-primary-foreground/30 text-primary-foreground font-medium px-8 py-3.5 rounded-full text-center hover:bg-primary-foreground/10">
+          <a href={`${base}/services`} class="border border-primary-foreground/30 text-primary-foreground font-medium px-8 py-3.5 rounded-full text-center hover:bg-primary-foreground/10">
             View Our Work
           </a>
         </div>
@@ -39,7 +40,7 @@ import Layout from '../layouts/Layout.astro';
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <a href="/services#additions" class="group block bg-white rounded-md border border-border overflow-hidden">
+        <a href={`${base}/services#additions`} class="group block bg-white rounded-md border border-border overflow-hidden">
           <div class="border-t-2 border-accent"></div>
           <div class="aspect-[4/3] overflow-hidden">
             <img
@@ -57,7 +58,7 @@ import Layout from '../layouts/Layout.astro';
           </div>
         </a>
 
-        <a href="/services#kitchen-bath" class="group block bg-white rounded-md border border-border overflow-hidden">
+        <a href={`${base}/services#kitchen-bath`} class="group block bg-white rounded-md border border-border overflow-hidden">
           <div class="border-t-2 border-accent"></div>
           <div class="aspect-[4/3] overflow-hidden">
             <img
@@ -75,7 +76,7 @@ import Layout from '../layouts/Layout.astro';
           </div>
         </a>
 
-        <a href="/services#alterations" class="group block bg-white rounded-md border border-border overflow-hidden">
+        <a href={`${base}/services#alterations`} class="group block bg-white rounded-md border border-border overflow-hidden">
           <div class="border-t-2 border-accent"></div>
           <div class="aspect-[4/3] overflow-hidden">
             <img
@@ -109,7 +110,7 @@ import Layout from '../layouts/Layout.astro';
           <p class="text-muted-foreground leading-relaxed mb-8">
             Our work is backed by a team of certified tradesmen dedicated to exceeding expectations. We don't settle for anything less than excellence, and our satisfied customers are proof of our commitment.
           </p>
-          <a href="/about" class="inline-flex items-center gap-2 text-primary font-semibold text-sm uppercase tracking-wider">
+          <a href={`${base}/about`} class="inline-flex items-center gap-2 text-primary font-semibold text-sm uppercase tracking-wider">
             Learn More About Us
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
           </a>
@@ -189,7 +190,7 @@ import Layout from '../layouts/Layout.astro';
         Contact Andy or Bob for a free consultation. We'll walk through your vision, provide a detailed quote, and set a clear timeline.
       </p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="/contact" class="bg-accent text-white font-semibold px-8 py-3.5 rounded-full hover:bg-accent/90">
+        <a href={`${base}/contact`} class="bg-accent text-white font-semibold px-8 py-3.5 rounded-full hover:bg-accent/90">
           Get a Free Quote
         </a>
         <a href="tel:4128551849" class="border border-primary-foreground/30 text-primary-foreground font-medium px-8 py-3.5 rounded-full hover:bg-primary-foreground/10">

@@ -30,7 +30,7 @@ html {
   html { scroll-behavior: auto; }
 }
 
-body {
+.site-ab-brothers {
   font-family: var(--font-body);
   color: var(--color-foreground);
   background: var(--color-background);
@@ -40,41 +40,43 @@ body {
   font-size: 16px;
 }
 
-h1, h2, h3 {
+.site-ab-brothers h1,
+.site-ab-brothers h2,
+.site-ab-brothers h3 {
   font-family: var(--font-display);
   color: var(--color-foreground);
 }
 
-h1 {
+.site-ab-brothers h1 {
   font-size: clamp(2.75rem, 5vw, 3.25rem);
   font-weight: 700;
   line-height: 1.1;
   letter-spacing: -0.03em;
 }
 
-h2 {
+.site-ab-brothers h2 {
   font-size: clamp(1.75rem, 3vw, 2rem);
   font-weight: 700;
   line-height: 1.2;
   letter-spacing: -0.02em;
 }
 
-h3 {
+.site-ab-brothers h3 {
   font-size: clamp(1.25rem, 2vw, 1.5rem);
   font-weight: 600;
   line-height: 1.3;
 }
 
-a {
+.site-ab-brothers a {
   color: var(--color-primary);
   text-decoration: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  a {
+  .site-ab-brothers a {
     transition: opacity 0.2s ease;
   }
-  a:hover {
+  .site-ab-brothers a:hover {
     opacity: 0.85;
   }
 }
