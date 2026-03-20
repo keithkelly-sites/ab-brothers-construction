@@ -33,6 +33,7 @@ const navLinks = [
   <meta property="og:url" content={Astro.url.href} />
   <meta property="og:image" content={new URL('/images/untitled-design-56.png', Astro.site).href} />
   <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" type="image/jpeg" href="/favicon.jpg" />
   <link rel="canonical" href={Astro.url.href} />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -143,7 +144,7 @@ const navLinks = [
             <div class="pt-1">
               <a href="mailto:abconstruction412@yahoo.com" class="text-primary-foreground opacity-100 hover:text-accent">abconstruction412@yahoo.com</a>
             </div>
-            <p class="text-primary-foreground/80 pt-1">Venetia, PA (South Hills of Pittsburgh)</p>
+            <p class="text-primary-foreground/80 pt-1">South Hills of Pittsburgh</p>
           </div>
         </div>
 
@@ -157,8 +158,9 @@ const navLinks = [
         </div>
       </div>
 
-      <div class="border-t border-primary-foreground/20 mt-12 pt-8 text-center">
+      <div class="border-t border-primary-foreground/20 mt-12 pt-8 flex flex-col sm:flex-row items-center justify-between gap-2">
         <p class="text-primary-foreground/75 text-xs">&copy; {new Date().getFullYear()} AB Brothers Construction, Inc. All rights reserved.</p>
+        <a href={`${base}/privacy-policy`} class="text-primary-foreground/75 text-xs hover:text-white">Privacy Policy</a>
       </div>
     </div>
   </footer>

@@ -9,8 +9,10 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 >
 
   <!-- Hero -->
-  <section class="bg-primary py-16 md:py-24">
-    <div class="max-w-[1200px] mx-auto px-6 md:px-12">
+  <section class="relative overflow-hidden">
+    <img src="/images/kitchen-and-bath-collage-1.png" alt="" class="absolute inset-0 w-full h-full object-cover" />
+    <div class="absolute inset-0 bg-primary/80"></div>
+    <div class="max-w-[1200px] mx-auto px-6 md:px-12 py-16 md:py-24 relative z-10">
       <p class="text-accent font-semibold text-sm tracking-widest uppercase mb-3">Our Services</p>
       <h1 class="text-primary-foreground max-w-2xl">Building Spaces That Fit Your Life</h1>
       <p class="text-primary-foreground/70 mt-4 max-w-xl text-lg">
