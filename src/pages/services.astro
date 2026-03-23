@@ -1,253 +1,356 @@
 ---
 import Layout from '../layouts/Layout.astro';
-const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
 <Layout
-  title="Services - AB Brothers Construction"
-  description="Kitchen and bathroom remodels, home additions, and home alterations in Pittsburgh's South Hills. Family-owned general contractor with certified tradesmen."
+  title="Services — AB Brothers Construction"
+  description="Kitchen and bathroom remodels, home additions, and home alterations in Pittsburgh's South Hills. Licensed, insured, and built on 12+ years of hands-on experience."
 >
 
   <!-- Hero -->
-  <section class="relative overflow-hidden">
-    <img src="/images/kitchen-and-bath-collage-1.png" alt="" class="absolute inset-0 w-full h-full object-cover" />
-    <div class="absolute inset-0 bg-primary/80"></div>
-    <div class="max-w-[1200px] mx-auto px-6 md:px-12 py-16 md:py-24 relative z-10">
-      <p class="text-accent font-semibold text-sm tracking-widest uppercase mb-3">Our Services</p>
-      <h1 class="text-primary-foreground max-w-2xl">Building Spaces That Fit Your Life</h1>
-      <p class="text-primary-foreground/70 mt-4 max-w-xl text-lg">
-        Every project gets the same treatment: certified tradesmen, clear communication, and craftsmanship that lasts.
+  <section class="hero">
+    <img src="/images/kitchen-and-bath-collage-1.png" alt="" class="hero-bg" aria-hidden="true" fetchpriority="high" />
+    <div class="hero-overlay"></div>
+    <div class="hero-content wrap">
+      <span class="label">Our Services</span>
+      <h1>What We Build</h1>
+      <p class="hero-sub text-dim">
+        Three specialties. One standard: do the work right, every time.
       </p>
     </div>
   </section>
 
   <!-- Kitchen & Bath -->
-  <section id="kitchen-bath" class="py-20 md:py-28 scroll-mt-20">
-    <div class="max-w-[1200px] mx-auto px-6 md:px-12">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-        <div>
-          <div class="inline-block bg-accent/10 text-accent text-xs font-semibold tracking-widest uppercase px-3 py-1.5 rounded-full mb-4">Kitchen & Bath</div>
-          <h2 class="mb-5">Kitchen & Bathroom Remodeling</h2>
-          <p class="text-muted-foreground leading-relaxed mb-4">
-            Upgrade your kitchen and bathroom with our expert renovations. From custom cabinetry to stunning tile work, we bring your vision to life, blending functionality with style. With over 12 years of experience, we turn everyday spaces into your favorite rooms.
+  <section id="kitchen-bath" class="service-section">
+    <div class="wrap">
+      <div class="service-grid">
+        <div class="service-text reveal">
+          <span class="label">Kitchen & Bath</span>
+          <h2>Kitchen & Bathroom Remodeling</h2>
+          <p class="text-dim">
+            Custom cabinetry, tile work, plumbing, and full renovations. We've spent 12 years turning everyday rooms into the ones you show off to guests. From marble vanity tops to farmhouse sinks, we handle every detail.
           </p>
-          <p class="text-muted-foreground leading-relaxed mb-6">
-            We take pride in our craftsmanship and are committed to delivering top quality results on every project. Our certified tradesmen and best-in-class network of specialists ensure that each job is completed to the highest standards.
-          </p>
-
-          <div class="space-y-3 mb-8">
-            <div class="flex items-start gap-3">
-              <div class="w-5 h-5 rounded-full bg-accent/15 flex items-center justify-center flex-shrink-0 mt-0.5">
-                <svg class="w-3 h-3 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
-              </div>
-              <p class="text-sm text-foreground/80">Custom cabinetry and countertop installation</p>
-            </div>
-            <div class="flex items-start gap-3">
-              <div class="w-5 h-5 rounded-full bg-accent/15 flex items-center justify-center flex-shrink-0 mt-0.5">
-                <svg class="w-3 h-3 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
-              </div>
-              <p class="text-sm text-foreground/80">Expert tile work and backsplash design</p>
-            </div>
-            <div class="flex items-start gap-3">
-              <div class="w-5 h-5 rounded-full bg-accent/15 flex items-center justify-center flex-shrink-0 mt-0.5">
-                <svg class="w-3 h-3 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
-              </div>
-              <p class="text-sm text-foreground/80">Plumbing, electrical, and fixture upgrades</p>
-            </div>
-            <div class="flex items-start gap-3">
-              <div class="w-5 h-5 rounded-full bg-accent/15 flex items-center justify-center flex-shrink-0 mt-0.5">
-                <svg class="w-3 h-3 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
-              </div>
-              <p class="text-sm text-foreground/80">Handicap accessibility compliance</p>
-            </div>
-          </div>
-
-          <a href={`${base}/contact`} class="inline-block bg-accent text-white font-semibold px-7 py-3 rounded-full text-sm hover:bg-accent/90">
-            Get a Free Quote
-          </a>
+          <ul class="service-list">
+            <li>Custom cabinetry and countertop installation</li>
+            <li>Tile work and backsplash design</li>
+            <li>Plumbing, electrical, and fixture upgrades</li>
+            <li>Handicap accessibility compliance</li>
+          </ul>
+          <a href="/contact" class="btn btn--copper">Get a Free Quote</a>
         </div>
-        <div class="grid grid-cols-2 gap-3">
-          <img src="/images/kitchen-and-bath-collage-1.png" alt="Kitchen Remodeling Pittsburgh" class="col-span-2 rounded-md w-full" loading="lazy" />
-          <img src="/images/11.png" alt="Kitchen remodel project" class="rounded-md w-full" loading="lazy" />
-          <img src="/images/33.png" alt="Bathroom remodel project" class="rounded-md w-full" loading="lazy" />
+        <div class="service-images reveal">
+          <img src="/images/bathroom-1200-x-1200-updated.png" alt="Freestanding bathtub with marble tile floor" class="service-img service-img--main" loading="lazy" />
+          <div class="service-img-pair">
+            <img src="/images/11.png" alt="Marble tile bathroom with teal walls" loading="lazy" />
+            <img src="/images/33.png" alt="Modern walk-in shower with dark tile" loading="lazy" />
+          </div>
         </div>
       </div>
     </div>
   </section>
+
+  <hr class="copper-rule" />
 
   <!-- Additions -->
-  <section id="additions" class="bg-muted py-20 md:py-28 scroll-mt-20">
-    <div class="max-w-[1200px] mx-auto px-6 md:px-12">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-        <div class="order-2 lg:order-1 grid grid-cols-2 gap-3">
-          <img src="/images/home-additions-pittburgh-pa.png" alt="Home Additions Pittsburgh, PA" class="col-span-2 rounded-md w-full" loading="lazy" />
-          <img src="/images/additions-images-1.png" alt="Home addition project" class="rounded-md w-full" loading="lazy" />
-          <img src="/images/37.png" alt="Home addition framing" class="rounded-md w-full" loading="lazy" />
+  <section id="additions" class="service-section">
+    <div class="wrap">
+      <div class="service-grid service-grid--reverse">
+        <div class="service-text reveal">
+          <span class="label">Additions</span>
+          <h2>Home Additions</h2>
+          <p class="text-dim">
+            New rooms, sunrooms, mud rooms, expanded living areas. We build additions that match your home's character so well, guests won't know what's new and what's original.
+          </p>
+          <ul class="service-list">
+            <li>Room additions and living space expansions</li>
+            <li>Mud rooms, sunrooms, and bonus rooms</li>
+            <li>Seamless integration with existing structure</li>
+          </ul>
+          <a href="/contact" class="btn btn--copper">Discuss Your Addition</a>
         </div>
-        <div class="order-1 lg:order-2">
-          <div class="inline-block bg-accent/10 text-accent text-xs font-semibold tracking-widest uppercase px-3 py-1.5 rounded-full mb-4">Additions</div>
-          <h2 class="mb-5">Home Additions</h2>
-          <p class="text-muted-foreground leading-relaxed mb-4">
-            Transform your home with our custom addition services. We bring years of experience and unmatched craftsmanship to every project, ensuring your new space fits seamlessly with your existing home and meets your unique needs.
-          </p>
-          <p class="text-muted-foreground leading-relaxed mb-6">
-            Whether you're dreaming of a new room, a larger living area, a mud room, or expanding your footprint, our team delivers high-quality craftsmanship and personalized designs to perfectly match your home's character.
-          </p>
-
-          <div class="space-y-3 mb-8">
-            <div class="flex items-start gap-3">
-              <div class="w-5 h-5 rounded-full bg-accent/15 flex items-center justify-center flex-shrink-0 mt-0.5">
-                <svg class="w-3 h-3 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
-              </div>
-              <p class="text-sm text-foreground/80">Room additions and living space expansions</p>
-            </div>
-            <div class="flex items-start gap-3">
-              <div class="w-5 h-5 rounded-full bg-accent/15 flex items-center justify-center flex-shrink-0 mt-0.5">
-                <svg class="w-3 h-3 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
-              </div>
-              <p class="text-sm text-foreground/80">Mud rooms, sunrooms, and bonus rooms</p>
-            </div>
-            <div class="flex items-start gap-3">
-              <div class="w-5 h-5 rounded-full bg-accent/15 flex items-center justify-center flex-shrink-0 mt-0.5">
-                <svg class="w-3 h-3 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
-              </div>
-              <p class="text-sm text-foreground/80">Seamless integration with existing structure</p>
-            </div>
+        <div class="service-images reveal">
+          <img src="/images/home-additions-pittburgh-pa.png" alt="Kitchen addition with exposed brick and wood ceiling" class="service-img service-img--main" loading="lazy" />
+          <div class="service-img-pair">
+            <img src="/images/additions-images-1.png" alt="Sunroom addition with wood plank ceiling" loading="lazy" />
+            <img src="/images/untitled-design-56.png" alt="Custom staircase with oak and metal railings" loading="lazy" />
           </div>
-
-          <a href={`${base}/contact`} class="inline-block bg-accent text-white font-semibold px-7 py-3 rounded-full text-sm hover:bg-accent/90">
-            Discuss Your Addition
-          </a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Home Alterations -->
-  <section id="alterations" class="py-20 md:py-28 scroll-mt-20">
-    <div class="max-w-[1200px] mx-auto px-6 md:px-12">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-        <div>
-          <div class="inline-block bg-accent/10 text-accent text-xs font-semibold tracking-widest uppercase px-3 py-1.5 rounded-full mb-4">Alterations</div>
-          <h2 class="mb-5">Home Alterations</h2>
-          <p class="text-muted-foreground leading-relaxed mb-4">
-            Reimagine your space with professional home alterations. We specialize in transforming existing spaces to better fit your lifestyle, whether it's an open-concept layout or a complete room makeover.
-          </p>
-          <p class="text-muted-foreground leading-relaxed mb-6">
-            From basement finishing to complete home renovations, our team tailors each project to your vision, enhancing your home's functionality and aesthetics seamlessly. We've handled everything from 1950s whole-home guts to focused den and sunroom updates.
-          </p>
+  <hr class="copper-rule" />
 
-          <div class="space-y-3 mb-8">
-            <div class="flex items-start gap-3">
-              <div class="w-5 h-5 rounded-full bg-accent/15 flex items-center justify-center flex-shrink-0 mt-0.5">
-                <svg class="w-3 h-3 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
-              </div>
-              <p class="text-sm text-foreground/80">Open-concept conversions and layout changes</p>
-            </div>
-            <div class="flex items-start gap-3">
-              <div class="w-5 h-5 rounded-full bg-accent/15 flex items-center justify-center flex-shrink-0 mt-0.5">
-                <svg class="w-3 h-3 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
-              </div>
-              <p class="text-sm text-foreground/80">Basement finishing and game room builds</p>
-            </div>
-            <div class="flex items-start gap-3">
-              <div class="w-5 h-5 rounded-full bg-accent/15 flex items-center justify-center flex-shrink-0 mt-0.5">
-                <svg class="w-3 h-3 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
-              </div>
-              <p class="text-sm text-foreground/80">Trim, flooring, drywall, and skim-coating</p>
-            </div>
-            <div class="flex items-start gap-3">
-              <div class="w-5 h-5 rounded-full bg-accent/15 flex items-center justify-center flex-shrink-0 mt-0.5">
-                <svg class="w-3 h-3 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
-              </div>
-              <p class="text-sm text-foreground/80">Water damage repair and restoration</p>
-            </div>
-          </div>
-
-          <a href={`${base}/contact`} class="inline-block bg-accent text-white font-semibold px-7 py-3 rounded-full text-sm hover:bg-accent/90">
-            Start Your Renovation
-          </a>
+  <!-- Alterations -->
+  <section id="alterations" class="service-section">
+    <div class="wrap">
+      <div class="service-grid">
+        <div class="service-text reveal">
+          <span class="label">Alterations</span>
+          <h2>Home Alterations</h2>
+          <p class="text-dim">
+            Open-concept conversions, basement finishing, game rooms, complete home renovations. We've gutted 1950s houses down to the studs and turned them into something their owners barely recognize.
+          </p>
+          <ul class="service-list">
+            <li>Open-concept conversions and layout changes</li>
+            <li>Basement finishing and game room builds</li>
+            <li>Trim, flooring, drywall, and skim-coating</li>
+            <li>Water damage repair and restoration</li>
+          </ul>
+          <a href="/contact" class="btn btn--copper">Start Your Renovation</a>
         </div>
-        <div class="grid grid-cols-2 gap-3">
-          <img src="/images/home-alterations-2.png" alt="Home alteration contractors" class="col-span-2 rounded-md w-full" loading="lazy" />
-          <img src="/images/40.png" alt="Home alteration project" class="rounded-md w-full" loading="lazy" />
-          <img src="/images/38.png" alt="Home renovation work" class="rounded-md w-full" loading="lazy" />
+        <div class="service-images reveal">
+          <img src="/images/home-alterations-2.png" alt="Open concept living space with stone fireplace" class="service-img service-img--main" loading="lazy" />
+          <div class="service-img-pair">
+            <img src="/images/37.png" alt="Custom fireplace surround with stone and wood built-ins" loading="lazy" />
+            <img src="/images/38.png" alt="Bathroom renovation with glass shower and bathtub" loading="lazy" />
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Why Choose Us -->
-  <section class="bg-primary py-20 md:py-28">
-    <div class="max-w-[1200px] mx-auto px-6 md:px-12">
-      <div class="text-center mb-14">
-        <p class="text-accent font-semibold text-sm tracking-widest uppercase mb-3">Why AB Brothers</p>
-        <h2 class="text-primary-foreground">Why Choose Us</h2>
+  <!-- Why AB Brothers -->
+  <section class="why-section section--surface">
+    <div class="wrap">
+      <div class="why-header reveal">
+        <span class="label">Why AB Brothers</span>
+        <h2>Six Reasons to Call Us First</h2>
       </div>
-
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div class="bg-primary-foreground/5 border border-primary-foreground/10 rounded-md p-7">
-          <div class="w-10 h-10 rounded-full bg-accent/20 flex items-center justify-center mb-4">
-            <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
-          </div>
-          <h3 class="text-primary-foreground text-base mb-2">Craftsmanship & Quality</h3>
-          <p class="text-primary-foreground/60 text-sm leading-relaxed">Our certified tradesmen and best-in-class network of specialists ensure that each job is completed to the highest standards.</p>
+      <div class="why-grid">
+        <div class="why-card reveal">
+          <span class="why-number text-copper">01</span>
+          <h3>Certified Tradesmen</h3>
+          <p class="text-dim">Master plumbers, electricians, tilers. Each team member is thoroughly vetted. No day laborers, no shortcuts.</p>
         </div>
-
-        <div class="bg-primary-foreground/5 border border-primary-foreground/10 rounded-md p-7">
-          <div class="w-10 h-10 rounded-full bg-accent/20 flex items-center justify-center mb-4">
-            <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
-          </div>
-          <h3 class="text-primary-foreground text-base mb-2">Family-Owned & Operated</h3>
-          <p class="text-primary-foreground/60 text-sm leading-relaxed">Based in South Hills, we bring a personal touch to every project. We treat your home like it's our own, focusing on quality, respect, and attention to detail.</p>
+        <div class="why-card reveal">
+          <span class="why-number text-copper">02</span>
+          <h3>Family-Owned</h3>
+          <p class="text-dim">Andy and Bob are on every job. You're not handed off to a crew you've never met.</p>
         </div>
-
-        <div class="bg-primary-foreground/5 border border-primary-foreground/10 rounded-md p-7">
-          <div class="w-10 h-10 rounded-full bg-accent/20 flex items-center justify-center mb-4">
-            <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
-          </div>
-          <h3 class="text-primary-foreground text-base mb-2">Transparent Communication</h3>
-          <p class="text-primary-foreground/60 text-sm leading-relaxed">From start to finish, we keep you informed every step of the way. You get a detailed daily schedule and clear budget before work begins.</p>
+        <div class="why-card reveal">
+          <span class="why-number text-copper">03</span>
+          <h3>Daily Schedule</h3>
+          <p class="text-dim">You get a detailed day-by-day schedule and clear budget before work begins. No surprises.</p>
         </div>
-
-        <div class="bg-primary-foreground/5 border border-primary-foreground/10 rounded-md p-7">
-          <div class="w-10 h-10 rounded-full bg-accent/20 flex items-center justify-center mb-4">
-            <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/></svg>
-          </div>
-          <h3 class="text-primary-foreground text-base mb-2">Proven Track Record</h3>
-          <p class="text-primary-foreground/60 text-sm leading-relaxed">With numerous happy clients and years of successful projects, our business is built largely on referrals and repeat clients.</p>
+        <div class="why-card reveal">
+          <span class="why-number text-copper">04</span>
+          <h3>Premium Materials</h3>
+          <p class="text-dim">Top-of-the-line building supplies cost a bit more upfront, but our work lasts longer. Your home's value goes up.</p>
         </div>
-
-        <div class="bg-primary-foreground/5 border border-primary-foreground/10 rounded-md p-7">
-          <div class="w-10 h-10 rounded-full bg-accent/20 flex items-center justify-center mb-4">
-            <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-          </div>
-          <h3 class="text-primary-foreground text-base mb-2">Certified Tradesmen</h3>
-          <p class="text-primary-foreground/60 text-sm leading-relaxed">Master plumbers, electricians, tilers, and more. Each team member is thoroughly vetted to deliver superior service from skilled experts.</p>
+        <div class="why-card reveal">
+          <span class="why-number text-copper">05</span>
+          <h3>Built on Referrals</h3>
+          <p class="text-dim">Most of our business comes from past clients telling their neighbors. That's the reputation we protect.</p>
         </div>
-
-        <div class="bg-primary-foreground/5 border border-primary-foreground/10 rounded-md p-7">
-          <div class="w-10 h-10 rounded-full bg-accent/20 flex items-center justify-center mb-4">
-            <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
-          </div>
-          <h3 class="text-primary-foreground text-base mb-2">Attention to Detail</h3>
-          <p class="text-primary-foreground/60 text-sm leading-relaxed">We work closely with you to create spaces that are not just functional but truly reflect your unique style and needs. The little things matter.</p>
+        <div class="why-card reveal">
+          <span class="why-number text-copper">06</span>
+          <h3>Licensed & Insured</h3>
+          <p class="text-dim">Fully licensed residential general contractor. Every sub we bring in is licensed and insured too.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- CTA -->
-  <section class="py-16 md:py-20">
-    <div class="max-w-[1200px] mx-auto px-6 md:px-12 text-center">
-      <h2 class="mb-4">Let's Talk About Your Project</h2>
-      <p class="text-muted-foreground max-w-lg mx-auto mb-8">
-        Every project starts with a conversation. Call us or fill out our contact form for a free consultation and detailed quote.
+  <section class="cta-section">
+    <div class="wrap" style="text-align: center;">
+      <h2 class="reveal">Let's Talk About Your Project</h2>
+      <p class="text-dim reveal" style="max-width: 32rem; margin: 1.25rem auto 2rem;">
+        Every project starts with a conversation. Call us or fill out our contact form for a free consultation.
       </p>
-      <a href={`${base}/contact`} class="inline-block bg-accent text-white font-semibold px-8 py-3.5 rounded-full hover:bg-accent/90">
-        Get a Free Quote
-      </a>
+      <a href="/contact" class="btn btn--copper reveal">Get a Free Quote</a>
     </div>
   </section>
 
 </Layout>
+
+<style>
+  .hero {
+    position: relative;
+    min-height: 50vh;
+    display: flex;
+    align-items: flex-end;
+    padding-block: 6rem 3rem;
+    overflow: hidden;
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 40%;
+  }
+
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to right,
+      var(--dark) 30%,
+      color-mix(in oklch, var(--dark) 75%, transparent)
+    );
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero h1 {
+    margin-top: 0.75rem;
+  }
+
+  .hero-sub {
+    margin-top: 1rem;
+    font-size: 1.125rem;
+    max-width: 28rem;
+  }
+
+  /* Service sections */
+  .service-section {
+    padding-block: var(--section-y);
+    scroll-margin-top: 5rem;
+  }
+
+  .service-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    align-items: center;
+  }
+
+  @media (min-width: 900px) {
+    .service-grid {
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+    }
+
+    .service-grid--reverse .service-text {
+      order: 2;
+    }
+    .service-grid--reverse .service-images {
+      order: 1;
+    }
+  }
+
+  .service-text h2 {
+    margin-top: 0.75rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .service-list {
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+  }
+
+  .service-list li {
+    padding-left: 1.5rem;
+    position: relative;
+    font-size: 0.9375rem;
+    color: var(--cream-dim);
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.6em;
+      width: 0.75rem;
+      height: 1px;
+      background: var(--copper);
+    }
+  }
+
+  .service-images {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .service-img--main {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+  }
+
+  .service-img-pair {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+
+    & img {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+    }
+  }
+
+  /* Why section */
+  .why-section {
+    padding-block: var(--section-y);
+  }
+
+  .why-header {
+    margin-bottom: 3rem;
+  }
+
+  .why-header h2 {
+    margin-top: 0.75rem;
+  }
+
+  .why-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  @media (min-width: 600px) {
+    .why-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media (min-width: 900px) {
+    .why-grid {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+
+  .why-card {
+    padding: 2rem;
+    border: 1px solid var(--border);
+    background: var(--dark);
+  }
+
+  .why-number {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    font-weight: 900;
+    display: block;
+    margin-bottom: 1rem;
+    line-height: 1;
+  }
+
+  .why-card h3 {
+    margin-bottom: 0.75rem;
+  }
+
+  .why-card p {
+    font-size: 0.9375rem;
+    line-height: 1.6;
+  }
+
+  /* CTA */
+  .cta-section {
+    padding-block: var(--section-y);
+  }
+
+  .cta-section h2 {
+    margin-bottom: 0.5rem;
+  }
+</style>

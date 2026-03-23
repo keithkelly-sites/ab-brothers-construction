@@ -1,203 +1,615 @@
 ---
+/*
+  DESIGN CONCEPT: "Craft in the Raw"
+
+  Studied: E2 Homes (immersive scroll, minimal text, let the work speak),
+  White Maple Construction (refined palette, family heritage marquee, flip-box reveals),
+  SiteInspire Architecture + Interior collections (dark warmth, materiality, dramatic type).
+
+  AB Brothers' photos are dominated by warm natural wood — oak floors, pine ceilings,
+  exposed brick — contrasted with clean modern finishes (marble, subway tile, glass).
+  Their logo uses a distressed typeface with an exposed-framing house icon: the structure
+  beneath the surface. The site makes that tension visual.
+
+  Dark warm base (#1a1714) = looking into an unlit renovation space.
+  Copper accent (#c8853f) = warm amber light breaking through.
+  Big Shoulders Display = industrial condensed type, Pittsburgh steel heritage.
+  Horizontal copper lines throughout = the metal railing bars of their staircase work.
+
+  SIGNATURE MOMENT: The hero. Company name in massive condensed type spanning the viewport,
+  overlaid on a dark gradient over their best kitchen photo. The scale of the type makes the
+  brand feel monumental — like the structures they build.
+*/
+
 import Layout from '../layouts/Layout.astro';
-const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
 <Layout
   title="AB Brothers Construction | Home Remodeling in Pittsburgh's South Hills"
-  description="AB Brothers Construction is a family-owned general contractor in Pittsburgh's South Hills, specializing in kitchen and bathroom remodels, home additions, and alterations. Over 12 years of experience."
+  description="AB Brothers Construction is a family-owned general contractor in Pittsburgh's South Hills. Kitchen and bathroom remodels, home additions, and renovations. 12+ years of experience, built on referrals."
 >
 
-  <!-- Hero -->
-  <section class="relative overflow-hidden">
-    <img src="/images/untitled-design-56.png" alt="" class="absolute inset-0 w-full h-full object-cover" />
-    <div class="absolute inset-0 bg-primary/80"></div>
-    <div class="max-w-[1200px] mx-auto px-6 md:px-12 py-24 md:py-36 relative z-10">
-      <div class="max-w-2xl">
-        <p class="text-accent font-semibold text-sm tracking-widest uppercase mb-4">Family-Owned &middot; South Hills, Pittsburgh</p>
-        <h1 class="text-primary-foreground mb-6">Committed to Quality and Craftsmanship</h1>
-        <p class="text-primary-foreground/75 text-lg md:text-xl leading-relaxed mb-10 max-w-xl">
-          We're craftsmen dedicated to bringing your vision to life with precision and integrity. From kitchen remodels to full home additions, we do the work right.
-        </p>
-        <div class="flex flex-col sm:flex-row gap-4">
-          <a href={`${base}/contact`} class="bg-accent text-white font-semibold px-8 py-3.5 rounded-full text-center hover:bg-accent/90">
-            Get a Free Quote
-          </a>
-          <a href={`${base}/services`} class="border-2 border-primary-foreground/60 text-primary-foreground font-semibold px-8 py-3.5 rounded-full text-center hover:bg-primary-foreground/10">
-            View Our Work
-          </a>
-        </div>
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "GeneralContractor",
+    "name": "AB Brothers Construction, Inc.",
+    "url": "https://ab-brothers-construction.keithkelly.dev",
+    "telephone": "+1-412-855-1849",
+    "email": "abconstruction412@yahoo.com",
+    "image": "https://ab-brothers-construction.keithkelly.dev/images/home-additions-pittburgh-pa.png",
+    "description": "Family-owned residential general contractor in Pittsburgh's South Hills specializing in kitchen and bathroom remodels, home additions, and home alterations.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Pittsburgh",
+      "addressRegion": "PA",
+      "addressCountry": "US"
+    },
+    "areaServed": {
+      "@type": "Place",
+      "name": "South Hills of Pittsburgh, PA"
+    },
+    "sameAs": [
+      "https://www.facebook.com/AB.BroConstruction/",
+      "https://www.linkedin.com/in/andrew-hovanec-88b11231/"
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5.0",
+      "reviewCount": "50"
+    }
+  })} />
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <img
+      src="/images/home-additions-pittburgh-pa.png"
+      alt="Kitchen renovation with exposed brick walls, wood plank ceiling, pendant lights, and farmhouse sink"
+      class="hero-bg"
+      fetchpriority="high"
+      aria-hidden="true"
+    />
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+      <div class="hero-name-row">
+        <span class="hero-name">AB Brothers</span>
+      </div>
+      <div class="hero-label-row">
+        <hr class="copper-rule--left hero-rule" />
+        <span class="label hero-tag">Construction Inc &middot; South Hills, Pittsburgh</span>
+      </div>
+      <p class="hero-copy">
+        Family-owned general contractor. Kitchen remodels, home additions, and renovations built by certified tradesmen with 12 years of hands-on experience.
+      </p>
+      <div class="hero-actions">
+        <a href="/contact" class="btn btn--copper">Get a Free Quote</a>
+        <a href="/services" class="btn btn--outline">View Our Work</a>
       </div>
     </div>
   </section>
 
-  <!-- Services Overview -->
-  <section class="py-20 md:py-28">
-    <div class="max-w-[1200px] mx-auto px-6 md:px-12">
-      <div class="text-center mb-14">
-        <p class="text-accent font-semibold text-sm tracking-widest uppercase mb-3">What We Do</p>
-        <h2>Our Services</h2>
+  <!-- ============ SERVICES ============ -->
+  <section class="services-section">
+    <div class="wrap">
+      <div class="services-header reveal">
+        <span class="label">What We Do</span>
+        <h2>Three Specialties. One Standard.</h2>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <a href={`${base}/services#additions`} class="group block bg-white rounded-md border border-border overflow-hidden">
-          <div class="border-t-2 border-accent"></div>
-          <div class="aspect-[4/3] overflow-hidden">
-            <img
-              src="/images/home-additions-pittburgh-pa.png"
-              alt="Home Additions Pittsburgh, PA"
-              class="w-full h-full object-cover"
-              loading="lazy"
-            />
+      <div class="services-grid">
+        <a href="/services#kitchen-bath" class="service-card reveal">
+          <div class="card-image">
+            <img src="/images/bathroom-1200-x-1200-updated.png" alt="Freestanding bathtub with sculptural lines on marble tile floor" loading="lazy" />
           </div>
-          <div class="p-6">
-            <h3 class="mb-2">Additions</h3>
-            <p class="text-muted-foreground text-sm leading-relaxed">
-              Expand your living space with custom home additions that match your home's character. New rooms, larger living areas, and more.
-            </p>
+          <div class="card-body">
+            <h3>Kitchens & Bathrooms</h3>
+            <p class="text-dim">Custom cabinetry, tile work, plumbing, and full renovations. 12 years turning everyday rooms into the ones you show off.</p>
+            <span class="card-link text-copper">Learn more</span>
           </div>
         </a>
 
-        <a href={`${base}/services#kitchen-bath`} class="group block bg-white rounded-md border border-border overflow-hidden">
-          <div class="border-t-2 border-accent"></div>
-          <div class="aspect-[4/3] overflow-hidden">
-            <img
-              src="/images/bathroom-1200-x-1200-updated.png"
-              alt="Kitchen & Bathroom Remodeling South Hills of Pittsburgh"
-              class="w-full h-full object-cover"
-              loading="lazy"
-            />
+        <a href="/services#additions" class="service-card reveal">
+          <div class="card-image">
+            <img src="/images/additions-images-1.png" alt="Sunroom addition with natural wood plank ceiling and large windows" loading="lazy" />
           </div>
-          <div class="p-6">
-            <h3 class="mb-2">Kitchens & Bathrooms</h3>
-            <p class="text-muted-foreground text-sm leading-relaxed">
-              Custom cabinetry, tile work, plumbing, and full renovations. Over 12 years turning everyday spaces into your favorite rooms.
-            </p>
+          <div class="card-body">
+            <h3>Home Additions</h3>
+            <p class="text-dim">New rooms, sunrooms, mud rooms. Built to match your home's character so well, guests won't know what's original.</p>
+            <span class="card-link text-copper">Learn more</span>
           </div>
         </a>
 
-        <a href={`${base}/services#alterations`} class="group block bg-white rounded-md border border-border overflow-hidden">
-          <div class="border-t-2 border-accent"></div>
-          <div class="aspect-[4/3] overflow-hidden">
-            <img
-              src="/images/2-1.png"
-              alt="Home Remodeling Pittsburgh PA"
-              class="w-full h-full object-cover"
-              loading="lazy"
-            />
+        <a href="/services#alterations" class="service-card reveal">
+          <div class="card-image">
+            <img src="/images/home-alterations-2.png" alt="Open concept living space with stone fireplace, exposed beams, and modern bar area" loading="lazy" />
           </div>
-          <div class="p-6">
-            <h3 class="mb-2">Home Alterations</h3>
-            <p class="text-muted-foreground text-sm leading-relaxed">
-              Open-concept layouts, complete room makeovers, basement finishing, and structural changes that transform how you live.
-            </p>
+          <div class="card-body">
+            <h3>Home Alterations</h3>
+            <p class="text-dim">Open-concept conversions, basement finishing, complete renovations. We've gutted 1950s houses and made them unrecognizable.</p>
+            <span class="card-link text-copper">Learn more</span>
           </div>
         </a>
       </div>
     </div>
   </section>
 
-  <!-- About Preview -->
-  <section class="bg-muted py-20 md:py-28">
-    <div class="max-w-[1200px] mx-auto px-6 md:px-12">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-        <div>
-          <p class="text-accent font-semibold text-sm tracking-widest uppercase mb-3">About Us</p>
-          <h2 class="mb-6">Craftsmanship You Can Trust</h2>
-          <p class="text-muted-foreground leading-relaxed mb-4">
-            AB Brothers Construction is a licensed and insured, family-owned residential general contractor based in Pittsburgh's South Hills. With decades of combined experience, we specialize in kitchen, bath, and game room remodels, while also offering expert plumbing and electrical services.
+  <!-- ============ FULL-BLEED PHOTO MOMENT ============ -->
+  <section class="photo-break">
+    <img
+      src="/images/37.png"
+      alt="Custom fireplace surround with stacked stone, rich wood mantel, and built-in cabinetry"
+      loading="lazy"
+    />
+    <div class="photo-break-overlay"></div>
+    <div class="photo-break-caption wrap">
+      <span class="label">Craftsmanship</span>
+      <p>Custom fireplace. Stacked stone. Wood built-ins. The details that make a house yours.</p>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT PREVIEW ============ -->
+  <section class="about-section">
+    <div class="wrap">
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <span class="label">About Us</span>
+          <h2>Andy & Bob Build It Right</h2>
+          <p class="text-dim">
+            AB Brothers Construction is a licensed and insured, family-owned residential general contractor based in Pittsburgh's South Hills. Decades of combined experience. A team of certified tradesmen. A business built almost entirely on referrals.
           </p>
-          <p class="text-muted-foreground leading-relaxed mb-8">
-            Our work is backed by a team of certified tradesmen dedicated to exceeding expectations. We don't settle for anything less than excellence, and our satisfied customers are proof of our commitment.
+          <p class="text-dim">
+            Andy and Bob work closely with every customer during planning. Bob manages the project day-to-day. You always know who's in your home and what's happening next.
           </p>
-          <a href={`${base}/about`} class="inline-flex items-center gap-2 text-primary font-semibold text-sm uppercase tracking-wider">
-            Learn More About Us
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          <a href="/about" class="about-link">
+            <span>More about us</span>
+            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
           </a>
         </div>
-        <div class="relative">
+        <div class="about-image reveal">
           <img
             src="/images/untitled-design-56.png"
-            alt="Home Remodeling Pittsburgh PA"
-            class="w-full rounded-md"
+            alt="Custom staircase with oak posts and horizontal metal railings"
             loading="lazy"
           />
-          <div class="absolute -bottom-4 -left-4 bg-accent text-white px-5 py-3 rounded-md text-sm font-semibold">
-            12+ Years Experience
-          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Testimonials -->
-  <section class="py-20 md:py-28">
-    <div class="max-w-[1200px] mx-auto px-6 md:px-12">
-      <div class="text-center mb-14">
-        <p class="text-accent font-semibold text-sm tracking-widest uppercase mb-3">Testimonials</p>
-        <h2>What Our Clients Say</h2>
+  <hr class="copper-rule" />
+
+  <!-- ============ TESTIMONIALS ============ -->
+  <section class="testimonials-section section--surface">
+    <div class="wrap">
+      <div class="testimonials-header reveal">
+        <span class="label">What Clients Say</span>
+        <h2>Built on Referrals</h2>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <blockquote class="bg-muted p-8 rounded-md border-l-3 border-accent">
-          <p class="text-foreground/80 leading-relaxed mb-5 italic">
-            "AB Brothers did a great job on our addition (mud room and full bath). They were very professional and communicative and transparent throughout the process. Love that this is a family-owned business and it was special to see multiple generations working together on our house for our family."
-          </p>
-          <footer class="flex items-center gap-3">
-            <div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold text-xs">JW</div>
-            <cite class="not-italic text-sm font-medium">Jennifer White</cite>
+      <div class="testimonials-grid">
+        <blockquote class="testimonial reveal">
+          <p>"AB Brothers did a great job on our addition (mud room and full bath). Very professional and communicative and transparent throughout. Love that this is a family-owned business. It was special to see multiple generations working together on our house."</p>
+          <footer>
+            <cite>Jennifer White</cite>
           </footer>
         </blockquote>
 
-        <blockquote class="bg-muted p-8 rounded-md border-l-3 border-accent">
-          <p class="text-foreground/80 leading-relaxed mb-5 italic">
-            "Bob and Andrew were great to work with. From the quality job they did on the kitchen down to the constant communication. They kept the job moving along at a quick pace and their attention to detail eased my mind throughout the job. Get a quote from these guys."
-          </p>
-          <footer class="flex items-center gap-3">
-            <div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold text-xs">SR</div>
-            <cite class="not-italic text-sm font-medium">Seth Ross</cite>
+        <blockquote class="testimonial reveal">
+          <p>"Bob and Andrew were great to work with. From the quality job they did on the kitchen down to the constant communication. They kept the job moving at a quick pace and their attention to detail eased my mind. Get a quote from these guys."</p>
+          <footer>
+            <cite>Seth Ross</cite>
           </footer>
         </blockquote>
 
-        <blockquote class="bg-muted p-8 rounded-md border-l-3 border-accent">
-          <p class="text-foreground/80 leading-relaxed mb-5 italic">
-            "These guys are TOP-notch. They walked into our home built sometime in the 1950s and completely renovated it. Not only did they give us design and layout advice, but they made the whole process enjoyable. They made us feel like we were their #1 priority at ALL times."
-          </p>
-          <footer class="flex items-center gap-3">
-            <div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold text-xs">AS</div>
-            <cite class="not-italic text-sm font-medium">Ali S.</cite>
+        <blockquote class="testimonial reveal">
+          <p>"These guys are TOP-notch. They walked into our home built in the 1950s and completely renovated it. Not only did they give us design and layout advice, but they made the whole process enjoyable. We felt like their #1 priority at ALL times."</p>
+          <footer>
+            <cite>Ali S.</cite>
           </footer>
         </blockquote>
 
-        <blockquote class="bg-muted p-8 rounded-md border-l-3 border-accent">
-          <p class="text-foreground/80 leading-relaxed mb-5 italic">
-            "Andrew and Bob and all their subcontractors did a FANTASTIC renovation, from helping on the design to demolition 'down to studs' to finished product! They created a very specific timeline (daily) and stuck to it; and kept right on budget. No surprises!"
-          </p>
-          <footer class="flex items-center gap-3">
-            <div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold text-xs">DH</div>
-            <cite class="not-italic text-sm font-medium">Dennis Halpin</cite>
+        <blockquote class="testimonial reveal">
+          <p>"Andrew and Bob did a FANTASTIC renovation, from helping on the design to demolition 'down to studs' to finished product! They created a very specific timeline (daily) and stuck to it, and kept right on budget. No surprises!"</p>
+          <footer>
+            <cite>Dennis Halpin</cite>
           </footer>
         </blockquote>
       </div>
     </div>
   </section>
 
-  <!-- CTA -->
-  <section class="bg-primary py-16 md:py-20">
-    <div class="max-w-[1200px] mx-auto px-6 md:px-12 text-center">
-      <h2 class="text-primary-foreground mb-4">Ready to Start Your Project?</h2>
-      <p class="text-primary-foreground/70 max-w-lg mx-auto mb-8">
-        Contact Andy or Bob for a free consultation. We'll walk through your vision, provide a detailed quote, and set a clear timeline.
+  <!-- ============ CTA ============ -->
+  <section class="cta-section">
+    <div class="cta-inner wrap">
+      <h2 class="reveal">Ready to Start Your Project?</h2>
+      <p class="text-dim reveal">
+        Call Andy or Bob for a free consultation. We'll walk through your vision, provide a detailed quote, and set a clear timeline.
       </p>
-      <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href={`${base}/contact`} class="bg-accent text-white font-semibold px-8 py-3.5 rounded-full hover:bg-accent/90">
-          Get a Free Quote
-        </a>
-        <a href="tel:4128551849" class="border-2 border-primary-foreground/60 text-primary-foreground font-semibold px-8 py-3.5 rounded-full hover:bg-primary-foreground/10">
-          Call (412) 855-1849
-        </a>
+      <div class="cta-actions reveal">
+        <a href="/contact" class="btn btn--copper">Get a Free Quote</a>
+        <a href="tel:4128551849" class="btn btn--outline">Call (412) 855-1849</a>
       </div>
     </div>
   </section>
 
 </Layout>
+
+<style>
+  /* ==================== HERO ==================== */
+  .hero {
+    position: relative;
+    min-height: 100dvh;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 4rem;
+    overflow: hidden;
+  }
+
+  @media (min-width: 768px) {
+    .hero {
+      padding-bottom: 5rem;
+    }
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 40%;
+  }
+
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(
+        to top,
+        var(--dark) 0%,
+        color-mix(in oklch, var(--dark) 85%, transparent) 40%,
+        color-mix(in oklch, var(--dark) 55%, transparent) 100%
+      );
+  }
+
+  @media (min-width: 768px) {
+    .hero-overlay {
+      background:
+        linear-gradient(
+          to right,
+          var(--dark) 15%,
+          color-mix(in oklch, var(--dark) 70%, transparent) 55%,
+          color-mix(in oklch, var(--dark) 40%, transparent) 100%
+        ),
+        linear-gradient(
+          to top,
+          var(--dark) 0%,
+          transparent 50%
+        );
+    }
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    padding-inline: var(--gutter);
+    max-width: var(--max-w);
+    margin-inline: auto;
+    width: 100%;
+  }
+
+  .hero-name-row {
+    overflow: hidden;
+  }
+
+  .hero-name {
+    display: block;
+    font-family: var(--font-heading);
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: clamp(4rem, 14vw, 11rem);
+    line-height: 0.85;
+    letter-spacing: -0.02em;
+    color: var(--cream);
+    animation: slide-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+
+  @keyframes slide-up {
+    from {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .hero-label-row {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1.25rem;
+    animation: slide-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.15s both;
+  }
+
+  .hero-rule {
+    width: 4rem;
+    height: 2px;
+    border: none;
+    flex-shrink: 0;
+    background: var(--copper);
+  }
+
+  .hero-tag {
+    white-space: nowrap;
+  }
+
+  .hero-copy {
+    margin-top: 1.5rem;
+    max-width: 32rem;
+    color: var(--cream-dim);
+    font-size: 1.0625rem;
+    line-height: 1.65;
+    animation: slide-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.3s both;
+  }
+
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 2rem;
+    animation: slide-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.45s both;
+  }
+
+  /* ==================== SERVICES ==================== */
+  .services-section {
+    padding-block: var(--section-y);
+  }
+
+  .services-header {
+    margin-bottom: 3rem;
+  }
+
+  .services-header h2 {
+    margin-top: 0.75rem;
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  @media (min-width: 768px) {
+    .services-grid {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
+    }
+  }
+
+  .service-card {
+    display: flex;
+    flex-direction: column;
+    background: var(--dark-surface);
+    border: 1px solid var(--border);
+    overflow: hidden;
+    transition: border-color 0.3s;
+  }
+
+  .service-card:hover {
+    border-color: var(--copper);
+  }
+
+  .card-image {
+    overflow: hidden;
+    aspect-ratio: 4 / 3;
+  }
+
+  .card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .service-card:hover .card-image img {
+    transform: scale(1.05);
+  }
+
+  .card-body {
+    padding: 1.5rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card-body h3 {
+    margin-bottom: 0.625rem;
+  }
+
+  .card-body p {
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    flex: 1;
+  }
+
+  .card-link {
+    display: inline-block;
+    margin-top: 1rem;
+    font-family: var(--font-heading);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-size: 0.75rem;
+    font-weight: 700;
+    transition: letter-spacing 0.3s;
+  }
+
+  .service-card:hover .card-link {
+    letter-spacing: 0.18em;
+  }
+
+  /* ==================== PHOTO BREAK ==================== */
+  .photo-break {
+    position: relative;
+    height: 60vh;
+    min-height: 24rem;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .photo-break > img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 25%;
+  }
+
+  .photo-break-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to top,
+      color-mix(in oklch, var(--dark) 90%, transparent) 0%,
+      transparent 60%
+    );
+  }
+
+  .photo-break-caption {
+    position: relative;
+    z-index: 1;
+    padding-bottom: 2.5rem;
+  }
+
+  .photo-break-caption p {
+    margin-top: 0.5rem;
+    font-style: italic;
+    font-size: 1.0625rem;
+    max-width: 28rem;
+    color: var(--cream-dim);
+  }
+
+  /* ==================== ABOUT ==================== */
+  .about-section {
+    padding-block: var(--section-y);
+  }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    align-items: center;
+  }
+
+  @media (min-width: 900px) {
+    .about-grid {
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+    }
+  }
+
+  .about-text h2 {
+    margin-top: 0.75rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .about-text p {
+    margin-bottom: 1rem;
+    line-height: 1.7;
+  }
+
+  .about-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+    font-family: var(--font-heading);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.8125rem;
+    font-weight: 700;
+    color: var(--copper);
+    transition: gap 0.3s;
+  }
+
+  .about-link:hover {
+    gap: 0.875rem;
+  }
+
+  .about-image img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+  }
+
+  /* ==================== TESTIMONIALS ==================== */
+  .testimonials-section {
+    padding-block: var(--section-y);
+  }
+
+  .testimonials-header {
+    margin-bottom: 3rem;
+  }
+
+  .testimonials-header h2 {
+    margin-top: 0.75rem;
+  }
+
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  @media (min-width: 768px) {
+    .testimonials-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .testimonial {
+    background: var(--dark);
+    border-left: 3px solid var(--copper);
+    padding: 2rem;
+  }
+
+  .testimonial p {
+    font-style: italic;
+    line-height: 1.7;
+    color: var(--cream-dim);
+    margin-bottom: 1.25rem;
+  }
+
+  .testimonial cite {
+    font-style: normal;
+    font-family: var(--font-heading);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.8125rem;
+    font-weight: 700;
+  }
+
+  /* ==================== CTA ==================== */
+  .cta-section {
+    padding-block: var(--section-y);
+  }
+
+  .cta-inner {
+    text-align: center;
+  }
+
+  .cta-inner p {
+    max-width: 32rem;
+    margin: 1.25rem auto 2rem;
+  }
+
+  .cta-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+  }
+</style>

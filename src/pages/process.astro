@@ -1,107 +1,106 @@
 ---
 import Layout from '../layouts/Layout.astro';
-const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
 <Layout
-  title="Our Process - AB Brothers Construction"
-  description="From the initial consultation to the final walkthrough, see how AB Brothers Construction handles every project with transparency and care in Pittsburgh's South Hills."
+  title="Our Process — AB Brothers Construction"
+  description="From the initial consultation to the final walkthrough. See how AB Brothers Construction handles every project with transparency, daily schedules, and clear budgets."
 >
 
   <!-- Hero -->
-  <section class="relative overflow-hidden">
-    <img src="/images/additions-images-1.png" alt="" class="absolute inset-0 w-full h-full object-cover" />
-    <div class="absolute inset-0 bg-primary/80"></div>
-    <div class="max-w-[1200px] mx-auto px-6 md:px-12 py-16 md:py-24 relative z-10">
-      <p class="text-accent font-semibold text-sm tracking-widest uppercase mb-3">How We Work</p>
-      <h1 class="text-primary-foreground max-w-2xl">Our Process</h1>
-      <p class="text-primary-foreground/70 mt-4 max-w-xl text-lg">
-        Simple, thorough, and transparent from start to finish.
+  <section class="hero">
+    <img src="/images/additions-images-1.png" alt="" class="hero-bg" aria-hidden="true" fetchpriority="high" />
+    <div class="hero-overlay"></div>
+    <div class="hero-content wrap">
+      <span class="label">How We Work</span>
+      <h1>Our Process</h1>
+      <p class="hero-sub text-dim">
+        Straightforward, transparent, and on schedule from day one.
       </p>
     </div>
   </section>
 
   <!-- Process Steps -->
-  <section class="py-20 md:py-28">
-    <div class="max-w-[800px] mx-auto px-6 md:px-12">
-      <p class="text-muted-foreground leading-relaxed mb-12 text-lg">
-        At AB Brothers Construction, we're proud to be one of the premier Pittsburgh home builders. Our process is simple yet thorough, ensuring your home construction or renovation project is smooth from start to finish.
+  <section class="steps-section">
+    <div class="wrap wrap--narrow">
+      <p class="steps-intro text-dim reveal">
+        We're proud to be one of Pittsburgh's premier home builders. Our process keeps things clear so you always know what's happening, what's next, and what it costs.
       </p>
 
-      <div class="space-y-12">
-        <div class="flex gap-6">
-          <div class="flex flex-col items-center">
-            <div class="w-10 h-10 rounded-full bg-accent text-white flex items-center justify-center font-bold text-sm flex-shrink-0">1</div>
-            <div class="w-px flex-1 bg-border mt-3"></div>
+      <div class="steps">
+        <div class="step reveal">
+          <div class="step-marker">
+            <span class="step-num">01</span>
+            <div class="step-line"></div>
           </div>
-          <div class="pb-8">
-            <h3 class="mb-3">Initial Consultation</h3>
-            <p class="text-muted-foreground text-sm leading-relaxed">
-              We learn about your vision. Andrew and Bob meet with you at your home, walk the space, and listen to what you want. We discuss your goals, budget, and timeline to make sure we're the right fit.
+          <div class="step-body">
+            <h3>Initial Consultation</h3>
+            <p class="text-dim">
+              Andy and Bob meet you at your home, walk the space, and listen to what you want. We discuss goals, budget, and timeline to make sure we're the right fit.
             </p>
           </div>
         </div>
 
-        <div class="flex gap-6">
-          <div class="flex flex-col items-center">
-            <div class="w-10 h-10 rounded-full bg-accent text-white flex items-center justify-center font-bold text-sm flex-shrink-0">2</div>
-            <div class="w-px flex-1 bg-border mt-3"></div>
+        <div class="step reveal">
+          <div class="step-marker">
+            <span class="step-num">02</span>
+            <div class="step-line"></div>
           </div>
-          <div class="pb-8">
-            <h3 class="mb-3">Detailed Quote & Schedule</h3>
-            <p class="text-muted-foreground text-sm leading-relaxed">
-              You receive a detailed quote and a day-by-day schedule of all work to be performed. No surprises. We also assist with picking fixtures, tile, and materials so you can make confident decisions.
+          <div class="step-body">
+            <h3>Detailed Quote & Schedule</h3>
+            <p class="text-dim">
+              You receive a detailed quote and a day-by-day schedule of all work. No surprises. We also help pick fixtures, tile, and materials so you can make confident decisions.
             </p>
           </div>
         </div>
 
-        <div class="flex gap-6">
-          <div class="flex flex-col items-center">
-            <div class="w-10 h-10 rounded-full bg-accent text-white flex items-center justify-center font-bold text-sm flex-shrink-0">3</div>
-            <div class="w-px flex-1 bg-border mt-3"></div>
+        <div class="step reveal">
+          <div class="step-marker">
+            <span class="step-num">03</span>
+            <div class="step-line"></div>
           </div>
-          <div class="pb-8">
-            <h3 class="mb-3">Prep & Protection</h3>
-            <p class="text-muted-foreground text-sm leading-relaxed">
-              We take great care in prepping your home to prevent any damages during the project. We use floor and wall coverings, and plastic zipper walls to ensure a clean and safe workspace. Your home is treated with the same respect we'd give our own.
+          <div class="step-body">
+            <h3>Prep & Protection</h3>
+            <p class="text-dim">
+              We use floor and wall coverings, plastic zipper walls, and protective barriers to keep your home clean and safe during the project. Your home gets the same respect we'd give our own.
             </p>
           </div>
         </div>
 
-        <div class="flex gap-6">
-          <div class="flex flex-col items-center">
-            <div class="w-10 h-10 rounded-full bg-accent text-white flex items-center justify-center font-bold text-sm flex-shrink-0">4</div>
-            <div class="w-px flex-1 bg-border mt-3"></div>
+        <div class="step reveal">
+          <div class="step-marker">
+            <span class="step-num">04</span>
+            <div class="step-line"></div>
           </div>
-          <div class="pb-8">
-            <h3 class="mb-3">Skilled Daily Work</h3>
-            <p class="text-muted-foreground text-sm leading-relaxed">
-              Daily work is performed by skilled tradesmen with care and craftsmanship. Everything is done by code and performed by certified tradesmen only. Your home is cleaned at the end of every workday.
+          <div class="step-body">
+            <h3>Skilled Daily Work</h3>
+            <p class="text-dim">
+              Every task is performed by certified tradesmen, by code. Your home is cleaned at the end of every workday. Bob oversees each day's progress.
             </p>
           </div>
         </div>
 
-        <div class="flex gap-6">
-          <div class="flex flex-col items-center">
-            <div class="w-10 h-10 rounded-full bg-accent text-white flex items-center justify-center font-bold text-sm flex-shrink-0">5</div>
-            <div class="w-px flex-1 bg-border mt-3"></div>
+        <div class="step reveal">
+          <div class="step-marker">
+            <span class="step-num">05</span>
+            <div class="step-line"></div>
           </div>
-          <div class="pb-8">
-            <h3 class="mb-3">Quality Materials</h3>
-            <p class="text-muted-foreground text-sm leading-relaxed">
-              We use top-of-the-line building supply products for all aspects of your renovation. This may sometimes cost a little more upfront, but our work will last a lot longer, saving you time and money in the long run while increasing the value of your home.
+          <div class="step-body">
+            <h3>Quality Materials</h3>
+            <p class="text-dim">
+              Top-of-the-line building supplies for every aspect of your renovation. It costs a little more upfront, but it lasts longer and increases your home's value.
             </p>
           </div>
         </div>
 
-        <div class="flex gap-6">
-          <div class="flex flex-col items-center">
-            <div class="w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-sm flex-shrink-0">6</div>
+        <div class="step reveal">
+          <div class="step-marker">
+            <span class="step-num">06</span>
           </div>
-          <div>
-            <h3 class="mb-3">Final Walkthrough</h3>
-            <p class="text-muted-foreground text-sm leading-relaxed">
-              We walk through the completed project together. Every detail is reviewed to make sure you're completely satisfied. We don't consider the job finished until you do.
+          <div class="step-body">
+            <h3>Final Walkthrough</h3>
+            <p class="text-dim">
+              We walk through the completed project together. Every detail is reviewed. We don't consider the job finished until you do.
             </p>
           </div>
         </div>
@@ -109,78 +108,321 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     </div>
   </section>
 
-  <!-- Testimonial Break -->
-  <section class="bg-muted py-16 md:py-20">
-    <div class="max-w-[700px] mx-auto px-6 md:px-12 text-center">
-      <blockquote class="border-l-3 border-accent pl-6 text-left">
-        <p class="text-foreground/80 leading-relaxed italic text-lg mb-5">
-          "I'm so glad that AB Brothers was recommended to me when I needed my main bathroom remodeled. Their communication was great, they worked long hours to make sure my family wasn't without our main bathroom for too long, and the finished job exceeded my expectations. It's been over 3 years since my bathroom was done and everything still looks great."
+  <!-- Testimonial break -->
+  <section class="quote-section section--surface">
+    <div class="wrap wrap--narrow reveal">
+      <blockquote class="pullquote">
+        <div class="pullquote-bar"></div>
+        <p>
+          "I'm so glad AB Brothers was recommended to me. Their communication was great, they worked long hours to make sure my family wasn't without our main bathroom for too long, and the finished job exceeded my expectations. It's been over 3 years and everything still looks great."
         </p>
         <footer>
-          <cite class="not-italic text-sm font-medium">Jill McKibben Suley</cite>
+          <cite>Jill McKibben Suley</cite>
         </footer>
       </blockquote>
     </div>
   </section>
 
-  <!-- FAQ Preview -->
-  <section class="py-20 md:py-28">
-    <div class="max-w-[800px] mx-auto px-6 md:px-12">
-      <div class="text-center mb-14">
-        <p class="text-accent font-semibold text-sm tracking-widest uppercase mb-3">Common Questions</p>
-        <h2>Frequently Asked Questions</h2>
+  <!-- FAQ -->
+  <section class="faq-section">
+    <div class="wrap wrap--narrow">
+      <div class="faq-header reveal">
+        <span class="label">Common Questions</span>
+        <h2>FAQ</h2>
       </div>
 
-      <div class="space-y-6">
-        <div class="border border-border rounded-md p-6 bg-white">
-          <h3 class="text-base mb-3">How long will I be without plumbing or electrical?</h3>
-          <p class="text-muted-foreground text-sm leading-relaxed">
-            You will only be without plumbing or electrical on certain days for a few hours up to one whole day.
+      <div class="faq-list">
+        <details class="faq-item reveal">
+          <summary class="faq-question">
+            <span>How long will I be without plumbing or electrical?</span>
+            <span class="faq-icon"></span>
+          </summary>
+          <p class="faq-answer text-dim">
+            You will only be without plumbing or electrical on certain days, for a few hours up to one whole day.
           </p>
-        </div>
+        </details>
 
-        <div class="border border-border rounded-md p-6 bg-white">
-          <h3 class="text-base mb-3">How long does a typical project take?</h3>
-          <p class="text-muted-foreground text-sm leading-relaxed">
-            Every job is different, but typically a bathroom is 3-4 weeks, a kitchen 4-6 weeks, and an average size addition 3-4 months.
+        <details class="faq-item reveal">
+          <summary class="faq-question">
+            <span>How long does a typical project take?</span>
+            <span class="faq-icon"></span>
+          </summary>
+          <p class="faq-answer text-dim">
+            Every job is different. Typically a bathroom is 3-4 weeks, a kitchen 4-6 weeks, and an average size addition 3-4 months.
           </p>
-        </div>
+        </details>
 
-        <div class="border border-border rounded-md p-6 bg-white">
-          <h3 class="text-base mb-3">Can you provide a quote over the phone?</h3>
-          <p class="text-muted-foreground text-sm leading-relaxed">
-            We cannot price a job before an in-home consultation because each job is different from the next. We need to see the space and understand your specific needs before providing an accurate estimate.
+        <details class="faq-item reveal">
+          <summary class="faq-question">
+            <span>Can you provide a quote over the phone?</span>
+            <span class="faq-icon"></span>
+          </summary>
+          <p class="faq-answer text-dim">
+            We can't price a job before an in-home consultation because each job is different. We need to see the space and understand your specific needs before providing an accurate estimate.
           </p>
-        </div>
+        </details>
 
-        <div class="border border-border rounded-md p-6 bg-white">
-          <h3 class="text-base mb-3">Do you do all the work yourself?</h3>
-          <p class="text-muted-foreground text-sm leading-relaxed">
-            Most of the project is done in-house with AB Brothers Construction. As far as electrical, drywall finishing, and HVAC, we have a small group of trusted and licensed skilled tradesmen that we have been using from the start of our business.
+        <details class="faq-item reveal">
+          <summary class="faq-question">
+            <span>Do you do all the work yourself?</span>
+            <span class="faq-icon"></span>
+          </summary>
+          <p class="faq-answer text-dim">
+            Most of the project is done in-house with AB Brothers Construction. For electrical, drywall finishing, and HVAC, we have a small group of trusted and licensed tradesmen we've used since the start of our business.
           </p>
-        </div>
+        </details>
 
-        <div class="border border-border rounded-md p-6 bg-white">
-          <h3 class="text-base mb-3">Who will be my main point of contact?</h3>
-          <p class="text-muted-foreground text-sm leading-relaxed">
-            Andrew and Bob work closely with each customer during the planning process. Bob is our project manager and person of contact for the duration of the job.
+        <details class="faq-item reveal">
+          <summary class="faq-question">
+            <span>Who will be my main point of contact?</span>
+            <span class="faq-icon"></span>
+          </summary>
+          <p class="faq-answer text-dim">
+            Andrew and Bob work closely with each customer during planning. Bob is the project manager and your main contact for the duration of the job.
           </p>
-        </div>
+        </details>
       </div>
     </div>
   </section>
 
   <!-- CTA -->
-  <section class="bg-primary py-16 md:py-20">
-    <div class="max-w-[1200px] mx-auto px-6 md:px-12 text-center">
-      <h2 class="text-primary-foreground mb-4">Ready to Get Started?</h2>
-      <p class="text-primary-foreground/70 max-w-lg mx-auto mb-8">
-        Contact us today to schedule a consultation and discover how we can bring your project to life.
+  <section class="cta-section section--surface">
+    <div class="wrap" style="text-align: center;">
+      <h2 class="reveal">Ready to Get Started?</h2>
+      <p class="text-dim reveal" style="max-width: 30rem; margin: 1.25rem auto 2rem;">
+        Contact us to schedule a consultation. We'll walk through your vision and give you a clear plan.
       </p>
-      <a href={`${base}/contact`} class="inline-block bg-accent text-white font-semibold px-8 py-3.5 rounded-full hover:bg-accent/90">
-        Schedule a Consultation
-      </a>
+      <a href="/contact" class="btn btn--copper reveal">Schedule a Consultation</a>
     </div>
   </section>
 
 </Layout>
+
+<style>
+  .hero {
+    position: relative;
+    min-height: 45vh;
+    display: flex;
+    align-items: flex-end;
+    padding-block: 6rem 3rem;
+    overflow: hidden;
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to right,
+      var(--dark) 35%,
+      color-mix(in oklch, var(--dark) 65%, transparent)
+    );
+  }
+
+  .hero-content { position: relative; z-index: 1; }
+  .hero h1 { margin-top: 0.75rem; }
+
+  .hero-sub {
+    margin-top: 1rem;
+    font-size: 1.125rem;
+    max-width: 28rem;
+  }
+
+  /* Steps */
+  .steps-section {
+    padding-block: var(--section-y);
+  }
+
+  .steps-intro {
+    font-size: 1.125rem;
+    line-height: 1.7;
+    margin-bottom: 3.5rem;
+  }
+
+  .steps {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .step {
+    display: flex;
+    gap: 1.5rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .step:last-child {
+    padding-bottom: 0;
+  }
+
+  .step-marker {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+  }
+
+  .step-num {
+    font-family: var(--font-heading);
+    font-size: 1.75rem;
+    font-weight: 900;
+    color: var(--copper);
+    line-height: 1;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--copper);
+  }
+
+  .step-line {
+    width: 1px;
+    flex: 1;
+    background: var(--border);
+    margin-top: 0.75rem;
+  }
+
+  .step-body h3 {
+    margin-bottom: 0.625rem;
+    padding-top: 0.25rem;
+  }
+
+  .step-body p {
+    font-size: 0.9375rem;
+    line-height: 1.7;
+  }
+
+  /* Testimonial */
+  .quote-section {
+    padding-block: var(--section-y);
+  }
+
+  .pullquote {
+    position: relative;
+    padding-left: 2rem;
+  }
+
+  .pullquote-bar {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: var(--copper);
+  }
+
+  .pullquote p {
+    font-style: italic;
+    font-size: 1.125rem;
+    line-height: 1.7;
+    color: var(--cream);
+    margin-bottom: 1.25rem;
+  }
+
+  .pullquote cite {
+    font-style: normal;
+    font-family: var(--font-heading);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.8125rem;
+    color: var(--copper);
+  }
+
+  /* FAQ */
+  .faq-section {
+    padding-block: var(--section-y);
+  }
+
+  .faq-header {
+    margin-bottom: 2.5rem;
+  }
+
+  .faq-header h2 {
+    margin-top: 0.75rem;
+  }
+
+  .faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .faq-item {
+    border-top: 1px solid var(--border);
+  }
+
+  .faq-item:last-child {
+    border-bottom: 1px solid var(--border);
+  }
+
+  .faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem 0;
+    cursor: pointer;
+    font-family: var(--font-heading);
+    font-size: 1.0625rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    font-weight: 700;
+    list-style: none;
+
+    &::-webkit-details-marker { display: none; }
+  }
+
+  .faq-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    position: relative;
+    flex-shrink: 0;
+    margin-left: 1rem;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      background: var(--copper);
+      transition: transform 0.3s;
+    }
+
+    &::before {
+      width: 100%;
+      height: 2px;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+    }
+
+    &::after {
+      width: 2px;
+      height: 100%;
+      left: 50%;
+      top: 0;
+      transform: translateX(-50%);
+    }
+  }
+
+  .faq-item[open] .faq-icon::after {
+    transform: translateX(-50%) rotate(90deg);
+  }
+
+  .faq-answer {
+    padding-bottom: 1.5rem;
+    font-size: 0.9375rem;
+    line-height: 1.7;
+    max-width: 40rem;
+  }
+
+  /* CTA */
+  .cta-section {
+    padding-block: var(--section-y);
+  }
+</style>

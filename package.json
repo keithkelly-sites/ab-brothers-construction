@@ -7,9 +7,12 @@
     "build": "astro build",
     "preview": "astro preview"
   },
+  "engines": {
+    "node": ">=22"
+  },
   "dependencies": {
-    "astro": "^5.0.0",
-    "@tailwindcss/vite": "^4.0.0",
-    "tailwindcss": "^4.0.0"
+    "@astrojs/sitemap": "^3.0.0",
+    "@fontsource-variable/big-shoulders-display": "^5.2.5",
+    "astro": "^6.0.0"
   }
 }
